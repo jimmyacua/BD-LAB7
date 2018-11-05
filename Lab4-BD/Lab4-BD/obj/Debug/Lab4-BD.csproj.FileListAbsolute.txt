@@ -1,0 +1,50 @@
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.exe.config
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.exe
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.pdb
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.Design.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csprojAssemblyReference.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.AgregarEstudiante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.EliminarEstudiante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.ListaEstudiante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.Login.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.Properties.Resources.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.GenerateResource.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.CoreCompileInputs.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.CopyComplete
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.exe
+C:\Users\Jimmy\Documents\U\Base de Datos 1\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.pdb
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.exe.config
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.exe
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.pdb
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.Design.dll
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.dll
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csprojResolveAssemblyReference.cache
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.AgregarEstudiante.resources
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.EliminarEstudiante.resources
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.ListaEstudiante.resources
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.Login.resources
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.Properties.Resources.resources
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.GenerateResource.Cache
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.CoreCompileInputs.cache
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.exe
+C:\Users\B50060\Downloads\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.pdb
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.exe.config
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.exe
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\bin\Debug\Lab4-BD.pdb
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.Design.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csprojAssemblyReference.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.AgregarEstudiante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.EliminarEstudiante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.ListaEstudiante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.Login.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4_BD.Properties.Resources.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.GenerateResource.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.CoreCompileInputs.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.csproj.CopyComplete
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.exe
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-LAB4\Lab4-BD\Lab4-BD\obj\Debug\Lab4-BD.pdb

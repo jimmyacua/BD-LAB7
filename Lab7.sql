@@ -77,3 +77,53 @@ END
 ​
  CATCH
 END
+
+--3:
+CREATE FUNCTION loginUsuario
+    (@pLoginName NVARCHAR​ (254), @pPassword NVARCHAR (50))
+RETURNS bit
+BEGIN
+/*Se declara variable para buscar el usuario*/​
+	DECLARE @userID INT, @result bit
+/*Se pregunta si existe una cedulaUsuario que tenga en nombreUsuario lo
+recibido en pLoginName*/
+	IF​ EXISTS (SELECT TOP ​1 cedulaUsuario FROM​ [dbo].[Usuarios] WHERE 
+	nombreUsuario=@pLoginName)
+​
+BEGIN
+	/*Si si existe una cédula con este nombreUsuario se pregunta si el
+Password de dicho usuario corresponde al recibido por parámetro junto
+con el salt de esa tupla*/
+​	SET @userID=(SELECT cedulaUsuario FROM [dbo].[Usuarios] WHERE nombreUsuario=@pLoginName AND​
+	 PasswordHash=HASHBYTES('SHA2_512',@pPassword+CAST(Salt AS NVARCHAR(36​))))
+/*si al final de ambas consultas userID es null se retorna 0*/​
+	IF(@userID IS NULL)
+		SET @result​ = ​0
+/*Si al final de ambas consultas userID no es null se retorna 1*/​
+	ELSE​
+		set @result​ = 1
+​END
+/*Si no existe ninguna cédula asociada a ese nombre de usuario se
+retorna 0*/​
+ELSE​
+	SET​ @result​ =​ 0
+	​
+RETURN​ @result
+end;
+
+--4:
+GO
+CREATE FUNCTION filtrarEstudiantes(@nombre VARCHAR​(​15​), @filtroTexto VARCHAR​(​20​))
+RETURNS​​
+TABLE
+AS
+	RETURN​(​ SELECT ​*​ FROM​ Estudiante e​ 
+			WHERE​ e.Nombre LIKE '%' + @nombre + '%'
+			AND (e.Nombre LIKE '%' + @filtroTexto + '%'
+​			OR e.Apellido1 LIKE '%' + @filtroTexto + '%'​
+			OR e.Apellido1 LIKE '%' + @filtroTexto + '%'​
+			OR e.Cedula LIKE '%' + @filtroTexto + ​'%'​
+			OR​ e.Carné LIKE '%' + @filtroTexto + '%'
+			)
+);
+
