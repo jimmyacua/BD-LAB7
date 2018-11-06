@@ -62,17 +62,18 @@ namespace Lab4_BD
         private void metroLabel1_Click_2(object sender, EventArgs e)
         {
 
-        }
+        }
+
 
         private void guardar_Click(object sender, EventArgs e)
         {
             if (!idField.Text.Contains(".") && !idField.Text.Contains(",") && !idField.Text.Contains("$")) //agregar más
             {
-                idField.MaxLength = 9; em.MaxLength = 30;
-
+                idField.MaxLength = 9; em.MaxLength = 20; nom.MaxLength = 15; ap1.MaxLength = 15; ap2.MaxLength = 15;
+                dir.MaxLength = 30; tel.MaxLength = 8; carnebox.MaxLength = 6; estad.MaxLength = 15;
 
                 int v = estudiante.AgregarEstudiante(idField.Text, em.Text, nom.Text, ap1.Text, ap2.Text, sexo,
-                 fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
+                fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
                 if (v == 0)
                 {
                     bool agregado = estudiante.AgregarUsuario(username.Text, contra.Text, idField.Text);
@@ -81,20 +82,24 @@ namespace Lab4_BD
                         idField.Clear(); em.Clear(); nom.Clear(); ap1.Clear(); ap2.Clear(); dir.Clear();
                         tel.Clear(); carnebox.Clear(); estad.Clear();
                         username.Clear(); contra.Clear();
-                        MessageBox.Show("Agregado correctamente", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Agregado correctamente", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Ya existe elusuario ", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Ya existe el usuario ", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         username.Clear(); contra.Clear();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ya existe un estudiante asociado a este numero de cedula en el sistema", "Resultados",
+                    MessageBox.Show("Ya existe un estudiante asociado a este numero de cedula en el sistema", "Agregar",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+            }
+            else {
+                MessageBox.Show("Cédula Inválida", "Agregar",
+                      MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

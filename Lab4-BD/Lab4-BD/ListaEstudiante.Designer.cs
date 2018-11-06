@@ -88,7 +88,7 @@
             this.filtro.Size = new System.Drawing.Size(88, 19);
             this.filtro.TabIndex = 4;
             this.filtro.Text = "Filtro General";
-            this.filtro.Click += new System.EventHandler(this.metroLabel1_Click);
+
             // 
             // filtroNombre
             // 

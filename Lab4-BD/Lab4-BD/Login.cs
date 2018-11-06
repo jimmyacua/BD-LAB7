@@ -38,18 +38,20 @@ namespace Lab4_BD
 
         private void aceptar_Click(object sender, EventArgs e)
         {
-            if (userbox.Text == null)
+            if (userbox.Text == "")
             {
                 MessageBox.Show("Debe digitar un nombre de usuario válido", "Log In",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (passBox.Text == null)
+            else if (passBox.Text == "")
             {
                 MessageBox.Show("Debe digitar una contraseña válida", "Log In",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else {
-                bool log = estudiante.LoginFuction(userbox.Text, passBox.Text);
+                string usern = userbox.Text;
+                string pass = passBox.Text;
+                bool log = estudiante.LoginFuction(usern, pass);
                 if (log) {
                     AgregarEstudiante agregar = new AgregarEstudiante();
                     agregar.Show();

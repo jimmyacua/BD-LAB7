@@ -31,14 +31,9 @@ namespace Lab4_BD
             LlenarTabla(dataGridView, null, null);
         }
 
-        private void metroLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nombres_SelectedIndexChanged(object sender, EventArgs e)
         {
-               LlenarTabla(dataGridView, filtroNombre.Text, null);
+               LlenarTabla(dataGridView, filtroNombre.Text, "null");
         }
 
         private void LlenarCombobox(ComboBox combobox)
@@ -76,18 +71,31 @@ namespace Lab4_BD
             DataTable tabla = new DataTable();
             if (filtroComBox == null && textBox == null)
             {
-                tabla = estudiante.ObtenerEstudiantes("", "");
+                tabla = estudiante.ObtenerEstudiantes("", ""); //para que salgan todos al inicio
             }
             else if (filtroComBox == null && textBox != null)
             {
-                tabla = estudiante.ObtenerEstudiantes("", textBox);
+                if (!textBox.Contains("select") && !textBox.Contains("update") && !textBox.Contains("delete") && !textBox.Contains("drop"))
+                {
+                    tabla = estudiante.ObtenerEstudiantes("null", textBox);
+                }
+                else
+                {
+                    tabla = estudiante.ObtenerEstudiantes("null", "null");
+                }
             }
             else if (filtroComBox != null && textBox == null)
             {
-                tabla = estudiante.ObtenerEstudiantes(filtroComBox, "");
+                tabla = estudiante.ObtenerEstudiantes(filtroComBox, "null");
             }
             else {
-                tabla = estudiante.ObtenerEstudiantes(filtroComBox, textBox);
+                if (!textBox.Contains("select") && !textBox.Contains("update") && !textBox.Contains("delete") && !textBox.Contains("drop"))
+                {
+                    tabla = estudiante.ObtenerEstudiantes(filtroComBox, textBox);
+                }
+                else {
+                    tabla = estudiante.ObtenerEstudiantes(filtroComBox, "null");
+                }
             }
             // Se inicializa el source para cargar el datagridview y se le
             //asigna el dataTable obtenido

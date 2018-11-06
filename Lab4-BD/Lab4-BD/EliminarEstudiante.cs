@@ -29,7 +29,7 @@ namespace Lab4_BD
             LlenarCombobox(filtroNombre);
             //Llena el datagridview de estudiantes con todas las tuplas de
             //estudiante de la interfaz
-            LlenarTabla(dataGridView, null);
+            LlenarTabla(dataGridView, "");
         }
 
         private void metroLink2_Click(object sender, EventArgs e)
@@ -76,11 +76,11 @@ namespace Lab4_BD
             DataTable tabla = new DataTable();
             if (filtroComBox == null)
             {
-                tabla = estudiante.ObtenerEstudiantes(null, null);
+                tabla = estudiante.ObtenerEstudiantes("", "");
             }
            else
             {
-                tabla = estudiante.ObtenerEstudiantes(filtroComBox, null);
+                tabla = estudiante.ObtenerEstudiantes(filtroComBox, "null");
             }
             // Se inicializa el source para cargar el datagridview y se le
             //asigna el dataTable obtenido
@@ -110,12 +110,10 @@ namespace Lab4_BD
         private void eliminar_Click(object sender, EventArgs e)
         {
             string nombre = filtroNombre.Text;
-            if (!nombre.Contains("drop") && !nombre.Contains("delete") && !nombre.Contains("insert") && !nombre.Contains("update"))
-            {
-                estudiante.EliminarEstudiante(nombre);
-                this.LlenarCombobox(filtroNombre);
-                this.LlenarTabla(dataGridView, null);
-            }
+            estudiante.EliminarEstudiante(nombre);
+            this.LlenarCombobox(filtroNombre);
+            this.LlenarTabla(dataGridView, "");
+          
         }
     }
 }

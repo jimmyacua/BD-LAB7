@@ -48,11 +48,11 @@ namespace Lab4_BD
         public DataTable ObtenerEstudiantes(string filtroNombre, string filtroGeneral)
         {
             DataTable tabla = null;
-            try{
+            try{/*
                 //Si los filtros son nulos se cargan todos los estudiantes de la base de datos
                 if (filtroGeneral == null && filtroNombre == null){
                     //tabla = bd.EjecutarConsultaTabla("SELECT * FROM Estudiante" );
-                    tabla = bd.FiltrarPorNombre("", "");
+                  
                 }
                 //Si el filtro de nombre no es nulo carga los estudiantes cuyo nombre sea el que
                 //tiene el filtro
@@ -60,26 +60,28 @@ namespace Lab4_BD
                     /*tabla = bd.EjecutarConsultaTabla("SELECT * FROM Estudiante WHERE Nombre LIKE '%" +
                     filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral +
                     "%' OR apellido2 like '%" + filtroGeneral + "%' OR Cedula like '%"
-                    + filtroGeneral + "%' OR Carné like '%" + filtroGeneral + "%'");*/
-                    tabla = bd.FiltrarPorNombre("", filtroGeneral);
-                }
+                    + filtroGeneral + "%' OR Carné like '%" + filtroGeneral + "%'");
+                    
+                //}
                 //Si el filtro general no es nulo cargan los estudiantes con
                 //atributos que contengan ese filtro como parte del atributo(like)
-                else if (filtroNombre != null){
-                    tabla = bd.FiltrarPorNombre(filtroNombre, "");
-                    /*tabla = bd.EjecutarConsultaTabla("SELECT * FROM Estudiante WHERE Nombre = '"
-                    + filtroNombre + "'");*/
+                //else if (filtroNombre != null){
+                   // tabla = bd.FiltrarPorNombre(filtroNombre, " ");
+                /*tabla = bd.EjecutarConsultaTabla("SELECT * FROM Estudiante WHERE Nombre = '"
+                + filtroNombre + "'");
                 }
                 //Si ninguno de los filtros es nulo carga los estudiantes que
                 //coincidan con ambos filtros
                 else if (filtroGeneral != null && filtroNombre != null){
-                    /*tabla = bd.EjecutarConsultaTabla("Select * from estudiante where Nombre = '" 
-                    + filtroNombre + "' && Nombre like '%" +
-                    filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral +
-                    "%' OR apellido2 like '%" + filtroGeneral + "%' OR Cedula like '%" 
-                    + filtroGeneral + "%' OR Carné like '%" + filtroGeneral + "%'");*/
-                    tabla = bd.FiltrarPorNombre(filtroNombre, filtroGeneral);
-                }
+                tabla = bd.EjecutarConsultaTabla("Select * from estudiante where Nombre = '" 
+                + filtroNombre + "' && Nombre like '%" +
+                filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral +
+                "%' OR apellido2 like '%" + filtroGeneral + "%' OR Cedula like '%" 
+                + filtroGeneral + "%' OR Carné like '%" + filtroGeneral + "%'");
+                
+                }*/
+
+                tabla = bd.FiltrarPorNombre(filtroNombre, filtroGeneral);
                 
             }
             catch (SqlException ex){
@@ -105,7 +107,7 @@ namespace Lab4_BD
         }
         
         public bool LoginFuction(string nombre, string password) {
-            return bd.Login(nombre, password);
+            return bd.LoginFuction(nombre, password);
         }
 
     }

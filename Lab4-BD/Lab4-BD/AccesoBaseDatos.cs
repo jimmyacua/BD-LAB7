@@ -120,7 +120,7 @@ namespace Lab_Interfaces
                 /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
                  * de segundo parámetro recibe el sqlConnection
                 */
-                using (SqlCommand cmd = new SqlCommand("eliminarEstudiante", con))
+                using (SqlCommand cmd = new SqlCommand("ElimEst", con))
                 {
                     try
                     {
@@ -210,7 +210,7 @@ namespace Lab_Interfaces
                 /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
                  * de segundo parámetro recibe el sqlConnection
                 */
-                using (SqlCommand cmd = new SqlCommand("Login", con))
+                using (SqlCommand cmd = new SqlCommand("loginUsuario", con))
                 {
                     try
                     {
