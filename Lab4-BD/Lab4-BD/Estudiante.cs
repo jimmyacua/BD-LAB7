@@ -52,7 +52,7 @@ namespace Lab4_BD
                 //Si los filtros son nulos se cargan todos los estudiantes de la base de datos
                 if (filtroGeneral == null && filtroNombre == null){
                     //tabla = bd.EjecutarConsultaTabla("SELECT * FROM Estudiante" );
-                    tabla = bd.FiltrarPorNombre("''", "''");
+                    tabla = bd.FiltrarPorNombre("", "");
                 }
                 //Si el filtro de nombre no es nulo carga los estudiantes cuyo nombre sea el que
                 //tiene el filtro
@@ -61,12 +61,12 @@ namespace Lab4_BD
                     filtroGeneral + "%' OR Apellido1 like '%" + filtroGeneral +
                     "%' OR apellido2 like '%" + filtroGeneral + "%' OR Cedula like '%"
                     + filtroGeneral + "%' OR Carné like '%" + filtroGeneral + "%'");*/
-                    tabla = bd.FiltrarPorNombre(null, filtroGeneral);
+                    tabla = bd.FiltrarPorNombre("", filtroGeneral);
                 }
                 //Si el filtro general no es nulo cargan los estudiantes con
                 //atributos que contengan ese filtro como parte del atributo(like)
                 else if (filtroNombre != null){
-                    tabla = bd.FiltrarPorNombre(filtroNombre, null);
+                    tabla = bd.FiltrarPorNombre(filtroNombre, "");
                     /*tabla = bd.EjecutarConsultaTabla("SELECT * FROM Estudiante WHERE Nombre = '"
                     + filtroNombre + "'");*/
                 }

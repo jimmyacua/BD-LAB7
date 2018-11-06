@@ -110,9 +110,12 @@ namespace Lab4_BD
         private void eliminar_Click(object sender, EventArgs e)
         {
             string nombre = filtroNombre.Text;
-            estudiante.EliminarEstudiante(nombre);
-            this.LlenarCombobox(filtroNombre);
-            this.LlenarTabla(dataGridView, null);
+            if (!nombre.Contains("drop") && !nombre.Contains("delete") && !nombre.Contains("insert") && !nombre.Contains(update))
+            {
+                estudiante.EliminarEstudiante(nombre);
+                this.LlenarCombobox(filtroNombre);
+                this.LlenarTabla(dataGridView, null);
+            }
         }
     }
 }

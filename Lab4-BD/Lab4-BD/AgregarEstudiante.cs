@@ -66,7 +66,8 @@ namespace Lab4_BD
 
         private void guardar_Click(object sender, EventArgs e)
         {
-         int v = estudiante.AgregarEstudiante(idField.Text, em.Text, nom.Text, ap1.Text, ap2.Text, sexo, 
+            idField.MaxLength = 9; em.MaxLength = 30;
+            int v = estudiante.AgregarEstudiante(idField.Text, em.Text, nom.Text, ap1.Text, ap2.Text, sexo, 
              fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
             if (v == 0)
             {
