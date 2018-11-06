@@ -76,15 +76,15 @@ namespace Lab4_BD
             DataTable tabla = new DataTable();
             if (filtroComBox == null && textBox == null)
             {
-                tabla = estudiante.ObtenerEstudiantes(null, null);
+                tabla = estudiante.ObtenerEstudiantes("", "");
             }
             else if (filtroComBox == null && textBox != null)
             {
-                tabla = estudiante.ObtenerEstudiantes(null, textBox);
+                tabla = estudiante.ObtenerEstudiantes("", textBox);
             }
             else if (filtroComBox != null && textBox == null)
             {
-                tabla = estudiante.ObtenerEstudiantes(filtroComBox, null);
+                tabla = estudiante.ObtenerEstudiantes(filtroComBox, "");
             }
             else {
                 tabla = estudiante.ObtenerEstudiantes(filtroComBox, textBox);

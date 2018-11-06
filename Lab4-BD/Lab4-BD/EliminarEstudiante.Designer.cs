@@ -97,6 +97,7 @@
             this.eliminar.TabIndex = 5;
             this.eliminar.Text = "Eliminar";
             this.eliminar.UseSelectable = true;
+            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
             // 
             // dataGridView
             // 

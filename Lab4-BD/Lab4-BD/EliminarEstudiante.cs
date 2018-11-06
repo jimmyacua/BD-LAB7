@@ -106,5 +106,13 @@ namespace Lab4_BD
         {
             LlenarTabla(dataGridView, filtroNombre.Text);
         }
+
+        private void eliminar_Click(object sender, EventArgs e)
+        {
+            string nombre = filtroNombre.Text;
+            estudiante.EliminarEstudiante(nombre);
+            this.LlenarCombobox(filtroNombre);
+            this.LlenarTabla(dataGridView, null);
+        }
     }
 }

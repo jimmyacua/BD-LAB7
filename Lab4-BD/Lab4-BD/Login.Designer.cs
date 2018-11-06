@@ -63,6 +63,7 @@
             this.aceptar.TabIndex = 3;
             this.aceptar.Text = "Aceptar";
             this.aceptar.UseSelectable = true;
+            this.aceptar.Click += new System.EventHandler(this.aceptar_Click);
             // 
             // userbox
             // 

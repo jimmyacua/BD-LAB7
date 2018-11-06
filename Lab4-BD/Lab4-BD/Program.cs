@@ -16,8 +16,8 @@ namespace Lab4_BD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
-            Application.Run(new AgregarEstudiante());
+            Application.Run(new Login());
+           //Application.Run(new AgregarEstudiante());
         }
     }
 }
