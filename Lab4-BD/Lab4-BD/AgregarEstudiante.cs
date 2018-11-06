@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using Lab_Interfaces;
 
 namespace Lab4_BD
 {
@@ -17,9 +18,11 @@ namespace Lab4_BD
     {
         public Estudiante estudiante;
         char sexo;
+        AccesoBaseDatos bd;
 
         public AgregarEstudiante()
         {
+            bd = new AccesoBaseDatos();
             sexo = 'O';
             InitializeComponent();
             estudiante = new Estudiante();
@@ -73,29 +76,28 @@ namespace Lab4_BD
                 dir.MaxLength = 30; tel.MaxLength = 8; carnebox.MaxLength = 6; estad.MaxLength = 15;
 
                 int v = estudiante.AgregarEstudiante(idField.Text, em.Text, nom.Text, ap1.Text, ap2.Text, sexo,
-                fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
-                if (v == 0)
+                        fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
+                bool agregado = estudiante.AgregarUsuario(username.Text, contra.Text, idField.Text);
+                if (agregado && v == 0)
                 {
-                    bool agregado = estudiante.AgregarUsuario(username.Text, contra.Text, idField.Text);
-                    if (agregado)
-                    {
-                        idField.Clear(); em.Clear(); nom.Clear(); ap1.Clear(); ap2.Clear(); dir.Clear();
-                        tel.Clear(); carnebox.Clear(); estad.Clear();
-                        username.Clear(); contra.Clear();
-                        MessageBox.Show("Agregado correctamente", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ya existe el usuario ", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        username.Clear(); contra.Clear();
-                    }
+                    idField.Clear(); em.Clear(); nom.Clear(); ap1.Clear(); ap2.Clear(); dir.Clear();
+                    tel.Clear(); carnebox.Clear(); estad.Clear();
+                    username.Clear(); contra.Clear();
+                    MessageBox.Show("Agregado correctamente", "Agregar",
+                      MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                else
+                else if (!agregado)
                 {
-                    MessageBox.Show("Ya existe un estudiante asociado a este numero de cedula en el sistema", "Agregar",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    bd.EjecutarConsulta("DELETE FROM Estudiante Where Cedula = '" + idField.Text + "';");
+                    MessageBox.Show("El usuario ya existe", "Agregar",
+                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    bd.EjecutarConsulta("DELETE FROM Usuarios Where nombreUsuario = '" + username.Text + "';");
+                    MessageBox.Show("Ya existe un estudiante asociado a este numero de cedula en el sistema", "Resultados",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-                }
             }
             else {
                 MessageBox.Show("Cédula Inválida", "Agregar",
