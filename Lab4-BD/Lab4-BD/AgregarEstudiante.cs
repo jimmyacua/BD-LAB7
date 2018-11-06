@@ -62,32 +62,39 @@ namespace Lab4_BD
         private void metroLabel1_Click_2(object sender, EventArgs e)
         {
 
-        }
+        }
 
         private void guardar_Click(object sender, EventArgs e)
         {
-            idField.MaxLength = 9; em.MaxLength = 30;
-            int v = estudiante.AgregarEstudiante(idField.Text, em.Text, nom.Text, ap1.Text, ap2.Text, sexo, 
-             fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
-            if (v == 0)
+            if (!idField.Text.Contains(".") && !idField.Text.Contains(",") && !idField.Text.Contains("$")) //agregar más
             {
-                bool agregado = estudiante.AgregarUsuario(username.Text, contra.Text, idField.Text);
-                if (agregado)
+                idField.MaxLength = 9; em.MaxLength = 30;
+
+
+                int v = estudiante.AgregarEstudiante(idField.Text, em.Text, nom.Text, ap1.Text, ap2.Text, sexo,
+                 fecha.Value.ToString("yyyy-MM-dd"), dir.Text, tel.Text, carnebox.Text, estad.Text);
+                if (v == 0)
                 {
-                    idField.Clear(); em.Clear(); nom.Clear(); ap1.Clear(); ap2.Clear(); dir.Clear();
-                    tel.Clear(); carnebox.Clear(); estad.Clear();
-                    username.Clear(); contra.Clear();
-                    MessageBox.Show("Agregado correctamente", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bool agregado = estudiante.AgregarUsuario(username.Text, contra.Text, idField.Text);
+                    if (agregado)
+                    {
+                        idField.Clear(); em.Clear(); nom.Clear(); ap1.Clear(); ap2.Clear(); dir.Clear();
+                        tel.Clear(); carnebox.Clear(); estad.Clear();
+                        username.Clear(); contra.Clear();
+                        MessageBox.Show("Agregado correctamente", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe elusuario ", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        username.Clear(); contra.Clear();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ya existe elusuario ", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    username.Clear(); contra.Clear();
+                    MessageBox.Show("Ya existe un estudiante asociado a este numero de cedula en el sistema", "Resultados",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
-            }
-            else {
-                MessageBox.Show("Ya existe un estudiante asociado a este numero de cedula en el sistema", "Resultados",
-MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

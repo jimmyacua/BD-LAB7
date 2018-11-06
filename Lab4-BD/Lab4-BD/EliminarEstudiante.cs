@@ -110,7 +110,7 @@ namespace Lab4_BD
         private void eliminar_Click(object sender, EventArgs e)
         {
             string nombre = filtroNombre.Text;
-            if (!nombre.Contains("drop") && !nombre.Contains("delete") && !nombre.Contains("insert") && !nombre.Contains(update))
+            if (!nombre.Contains("drop") && !nombre.Contains("delete") && !nombre.Contains("insert") && !nombre.Contains("update"))
             {
                 estudiante.EliminarEstudiante(nombre);
                 this.LlenarCombobox(filtroNombre);
